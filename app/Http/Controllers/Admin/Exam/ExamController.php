@@ -22,7 +22,7 @@ class ExamController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.Exam.create');
     }
 
     /**
@@ -30,7 +30,7 @@ class ExamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

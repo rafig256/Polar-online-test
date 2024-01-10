@@ -44,11 +44,15 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>New York, USA
                                         </li>
                                         <li class="contacts-block__item">
-                                            <i class="fas fa-hourglass-half ml-5"></i>{{round($exam->time /60,0) }} دقیقه
+                                            <i class="fas fa-hourglass-half pr-2"></i>{{round($exam->time /60,0) }} دقیقه
                                         </li>
                                         <li class="contacts-block__item">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +1 (530) 555-12121
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            </svg> تعداد سوال: {{$exam->number_questions}}
                                         </li>
+                                            <li class="contacts-block__item">
+                                                <i class="fa fa-fire pr-2" aria-hidden="true"></i>وضعیت آزمون: {!! $exam->status ? "<span class='text-success'>فعال</span>" : "<span class='text-danger'>فعال</span>"!!}
+                                            </li>
                                         <li class="contacts-block__item">
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
@@ -76,7 +80,7 @@
 
                     <div class="education layout-spacing ">
                         <div class="widget-content widget-content-area">
-                            <h3 class="">Education</h3>
+                            <h3 class="">قطب های آزمون</h3>
                             <div class="timeline-alter">
                                 <div class="item-timeline">
                                     <div class="t-meta-date">
@@ -114,85 +118,23 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="work-experience layout-spacing ">
-
-                        <div class="widget-content widget-content-area">
-
-                            <h3 class="">Work Experience</h3>
-
-                            <div class="timeline-alter">
-
-                                <div class="item-timeline">
-                                    <div class="t-meta-date">
-                                        <p class="">04 Mar 2009</p>
-                                    </div>
-                                    <div class="t-dot">
-                                    </div>
-                                    <div class="t-text">
-                                        <p>Netfilx Inc.</p>
-                                        <p>Designer Illustrator</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-timeline">
-                                    <div class="t-meta-date">
-                                        <p class="">25 Apr 2014</p>
-                                    </div>
-                                    <div class="t-dot">
-                                    </div>
-                                    <div class="t-text">
-                                        <p>Google Inc.</p>
-                                        <p>Designer Illustrator</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-timeline">
-                                    <div class="t-meta-date">
-                                        <p class="">04 Apr 2018</p>
-                                    </div>
-                                    <div class="t-dot">
-                                    </div>
-                                    <div class="t-text">
-                                        <p>Design Reset Inc.</p>
-                                        <p>Designer Illustrator</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
 
                 <div class="col-xl-8 col-lg-6 col-md-7 col-sm-12 layout-top-spacing">
 
                     <div class="skills layout-spacing ">
                         <div class="widget-content widget-content-area">
-                            <h3 class="">Skills</h3>
-                            <div class="progress br-30">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-title"><span>PHP</span> <span>25%</span> </div></div>
-                            </div>
-                            <div class="progress br-30">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-title"><span>Wordpress</span> <span>50%</span> </div></div>
-                            </div>
-                            <div class="progress br-30">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-title"><span>Javascript</span> <span>70%</span> </div></div>
-                            </div>
-                            <div class="progress br-30">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-title"><span>jQuery</span> <span>60%</span> </div></div>
-                            </div>
+                            <h3 class="">معرفی آزمون</h3>
+                            <p>{{$exam->info}}</p>
 
                         </div>
                     </div>
 
                     <div class="bio layout-spacing ">
                         <div class="widget-content widget-content-area">
-                            <h3 class="">Bio</h3>
-                            <p>I'm Web Developer from California. I code and design websites worldwide. Mauris varius tellus vitae tristique sagittis. Sed aliquet, est nec auctor aliquet, orci ex vestibulum ex, non pharetra lacus erat ac nulla.</p>
+                            <h3 class="">اطلاعات تکمیلی</h3>
 
-                            <p>Sed vulputate, ligula eget mollis auctor, lectus elit feugiat urna, eget euismod turpis lectus sed ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ut velit finibus, scelerisque sapien vitae, pharetra est. Nunc accumsan ligula vehicula scelerisque vulputate.</p>
+                            <p>{{$exam->description}}</p>
 
                             <div class="bio-skill-box">
 
