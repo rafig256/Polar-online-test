@@ -11,7 +11,7 @@ class alert extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $key , public string $error)
+    public function __construct(public string $key = "success"  , public string $error = "با موفقیت انجام شد")
     {
         //
     }

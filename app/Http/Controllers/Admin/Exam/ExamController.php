@@ -55,6 +55,9 @@ class ExamController extends Controller
      */
     public function update(Request $request, Exam $exam)
     {
+        if (!$request->get('status')){
+            $request->merge(['status' => '0']);
+        }
         $exam->update($request->all());
         return redirect()->route('exam.show',$exam->id)->withErrors([['success' => 'به روزرسانی با موفقیت انجام شد']]);
     }

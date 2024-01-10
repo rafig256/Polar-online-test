@@ -60,7 +60,7 @@
                                                                 <div class="col-4">
                                                                     <div class="form-group">
                                                                         <label for="status">وضعیت فعال بودن آزمون</label>
-                                                                        <input type="checkbox" class="new-control-input" id="status" @checked($exam->status)>
+                                                                        <input type="checkbox" class="new-control-input" name="status" id="status" value="1" @checked($exam->status)>
                                                                     </div>
                                                                 </div>
                                                             </div>

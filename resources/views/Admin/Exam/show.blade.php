@@ -52,7 +52,7 @@
                                             </svg> تعداد سوال: {{$exam->number_questions}}
                                         </li>
                                             <li class="contacts-block__item">
-                                                <i class="fa fa-fire pr-2" aria-hidden="true"></i>وضعیت آزمون: {!! $exam->status ? "<span class='text-success'>فعال</span>" : "<span class='text-danger'>فعال</span>"!!}
+                                                <i class="fa fa-fire pr-2" aria-hidden="true"></i>وضعیت آزمون: {!! $exam->status  == 1 ? "<span class='text-success'>فعال</span>" : "<span class='text-danger'>غیر فعال</span>"!!}
                                             </li>
                                         <li class="contacts-block__item">
                                             <ul class="list-inline">
