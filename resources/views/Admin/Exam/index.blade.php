@@ -9,6 +9,13 @@
 @section('content')
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
+            <!-- alert -->
+            @if ($errors->any())
+                @foreach ($errors->all() as $key => $error)
+                    <x-alert :key=$key , :error=$error ></x-alert>
+                @endforeach
+            @endif
+            <!-- End alert -->
             <div class="row layout-top-spacing">
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="mail-box-container">
@@ -92,7 +99,11 @@
 
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink-1">
                                                             <a class="dropdown-item warning" href="{{route('exam.edit',$exam->id)}}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg> ویرایش</a>
-                                                            <a class="dropdown-item danger" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg> حذف</a>
+                                                            <form action="{{route('exam.destroy',$exam->id)}}" method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg> حذف</button>
+                                                            </form>
                                                             <a class="dropdown-item primary" href="{{route('exam.show',$exam->id)}}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg> مشاهده</a>
                                                         </div>
                                                     </div>

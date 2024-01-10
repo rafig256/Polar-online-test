@@ -30,7 +30,16 @@ class ExamController extends Controller
      */
     public function store(Request $request)
     {
-        Exam::create($request->all());
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'number_questions' => 'required|numeric|max:500',
+            'time' => 'required|numeric|min:10|max:3600',
+            'info' => 'required|min:10',
+            'status'=> 'nullable',
+            'designer'=> 'nullable|string',
+            'description'=> 'string|nullable',
+        ]);
+        Exam::create($validatedData);
         return to_route('exam.index');
     }
 
@@ -55,10 +64,19 @@ class ExamController extends Controller
      */
     public function update(Request $request, Exam $exam)
     {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'number_questions' => 'required|numeric|max:500',
+            'time' => 'required|numeric|min:10|max:3600',
+            'info' => 'required|min:10',
+            'status'=> 'nullable',
+            'designer'=> 'nullable|string',
+            'description'=> 'string|nullable',
+        ]);
         if (!$request->get('status')){
-            $request->merge(['status' => '0']);
+            $validatedData['status'] = '0';
         }
-        $exam->update($request->all());
+        $exam->update($validatedData);
         return redirect()->route('exam.show',$exam->id)->withErrors([['success' => 'به روزرسانی با موفقیت انجام شد']]);
     }
 
@@ -67,8 +85,9 @@ class ExamController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Exam $exam)
     {
-        //
+        $exam->delete();
+        return redirect()->route('exam.index')->withErrors([['danger'=>"آزمون با موفقیت حذف شد"]]);
     }
 }

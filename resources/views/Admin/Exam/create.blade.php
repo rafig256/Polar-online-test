@@ -31,29 +31,44 @@
                                                                         <label for="name">نام آزمون <span @class('text-danger')>*</span></label>
                                                                         <input type="text" name="name" class="form-control mb-4" id="name" placeholder="نام آزمون را وارد کنید" required>
                                                                     </div>
+                                                                    @if ($errors->has('name'))
+                                                                        <small class="text-danger">{{$errors->first('name')}}</small>
+                                                                    @endif
                                                                 </div>
                                                                 <div class="col-sm-3">
                                                                     <label class="dob-input" for="number_questions">تعداد سوال <span @class('text-danger')>*</span></label>
                                                                     <div class="d-sm-flex d-block">
                                                                         <input type="number" name="number_questions" class="form-control" id="number_questions" required />
                                                                     </div>
+                                                                    @if ($errors->has('number_questions'))
+                                                                        <small class="text-danger">{{$errors->first('number_questions')}}</small>
+                                                                    @endif
                                                                 </div>
                                                                 <div class="col-sm-3">
                                                                     <label class="dob-input" for="time">زمان بر حسب ثانیه <span @class('text-danger')>*</span></label>
                                                                     <div class="d-sm-flex d-block">
                                                                         <input type="number" class="form-control" name="time"  required id="time"  />
                                                                     </div>
+                                                                    @if ($errors->has('time'))
+                                                                        <small class="text-danger">{{$errors->first('time')}}</small>
+                                                                    @endif
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="info">توضیح <span @class('text-danger')>*</span></label>
                                                                 <input type="text" name="info" required class="form-control mb-4" id="info" placeholder="توضیح کوتاه را وارد کنید">
+                                                                @if ($errors->has('info'))
+                                                                    <small class="text-danger">{{$errors->first('info')}}</small>
+                                                                @endif
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-8">
                                                                     <div class="form-group">
                                                                         <label for="designer">طراح آزمون</label>
-                                                                        <input type="text" class="form-control mb-4" id="designer" placeholder="نام طراح آزمون در صورت وجود" >
+                                                                        <input type="text" class="form-control mb-4" id="designer" name="designer" placeholder="نام طراح آزمون در صورت وجود" >
+                                                                        @if ($errors->has('designer'))
+                                                                            <small class="text-danger">{{$errors->first('designer')}}</small>
+                                                                        @endif
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-4">

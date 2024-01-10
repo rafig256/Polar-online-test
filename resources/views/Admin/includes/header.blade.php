@@ -132,7 +132,7 @@
                         <div class="media mx-auto">
                             <img src="{{asset('')}}assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar">
                             <div class="media-body">
-                                <h5>Alan Green</h5>
+                                <h5>در حال برنامه نویسی</h5>
                                 <p>Web Developer</p>
                             </div>
                         </div>

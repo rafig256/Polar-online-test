@@ -54,7 +54,7 @@
                                                                 <div class="col-8">
                                                                     <div class="form-group">
                                                                         <label for="designer">طراح آزمون</label>
-                                                                        <input type="text" class="form-control mb-4" id="designer" value="{{$exam->info ?? ''}}" placeholder="نام طراح آزمون در صورت وجود" >
+                                                                        <input type="text" class="form-control mb-4" id="designer" value="{{$exam->designer ?? ''}}" placeholder="نام طراح آزمون در صورت وجود" >
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-4">
