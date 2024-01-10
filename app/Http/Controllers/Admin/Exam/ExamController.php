@@ -30,7 +30,8 @@ class ExamController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        Exam::create($request->all());
+        return to_route('exam.index');
     }
 
     /**
@@ -44,18 +45,21 @@ class ExamController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Exam $exam)
     {
-        //
+        return view('Admin.Exam.edit',['exam'=>$exam]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Exam $exam)
     {
-        //
+        $exam->update($request->all());
+        return redirect()->route('exam.show',$exam->id)->withErrors([['success' => 'به روزرسانی با موفقیت انجام شد']]);
     }
+
+
 
     /**
      * Remove the specified resource from storage.
