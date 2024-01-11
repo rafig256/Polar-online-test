@@ -41,14 +41,15 @@ class PoleController extends Controller
         Pole::create($validatedData);
         return redirect()->route('pole.index')->withErrors([['success'=>'قطب با موفقیت ذخیره شد']]);
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Pole $pole)
     {
-        //
+        $exams = Exam::all();
+        return view('Admin.Pole.edit',['pole'=>$pole , 'exams'=>$exams]);
     }
 
     /**
@@ -56,7 +57,14 @@ class PoleController extends Controller
      */
     public function update(Request $request, Pole $pole)
     {
-        //
+        $validatedData = $request->validate([
+            'name'=>'string|required',
+            'positive'=>'string|required',
+            'negative'=>'string|required',
+            'exam_id'=>'required | exists:exams,id',
+        ]);
+        $pole->update($validatedData);
+        return to_route('pole.index')->withErrors([['success'=>'قطب با موفقیت به روزرسانی شد']]);
     }
 
     /**
@@ -64,6 +72,7 @@ class PoleController extends Controller
      */
     public function destroy(Pole $pole)
     {
-        //
+        $pole->delete();
+        return to_route('pole.index')->withErrors([['danger'=>'قطب با موفقیت حذف شد']]);
     }
 }
