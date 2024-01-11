@@ -14,4 +14,12 @@ class Exam extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function poles(){
+        return $this->hasMany(Pole::class);
+    }
+
+    public function Questions(){
+        return $this->hasManyThrough(Question::class,Pole::class);
+    }
 }
