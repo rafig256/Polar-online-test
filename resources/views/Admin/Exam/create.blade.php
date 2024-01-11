@@ -9,9 +9,7 @@
 @section('content')
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
-
             <div class="account-settings-container layout-top-spacing">
-
                 <div class="account-content">
                     <div class="scrollspy-example" data-spy="scroll" data-target="#account-settings-scroll" data-offset="-100">
                         <div class="col-12">
