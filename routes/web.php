@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', Index::class)->name('home');
 Route::get('/exam/{id}',Exam::class)->name('examPage');
+Route::get('/run_exam/{id}',\App\Livewire\Exam\RunExam::class)->name("runExam");
 Route::get('/register',\App\Livewire\Auth\Register::class)->name('register')->middleware('guest');
 Route::get('/login',\App\Livewire\Auth\Login::class)->name('login')->middleware('guest');
 Route::get('/logout',function (){

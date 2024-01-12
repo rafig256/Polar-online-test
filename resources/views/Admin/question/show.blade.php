@@ -78,9 +78,7 @@
                                         </div>
                                     @endif
                                 @endfor
-
                                 <!-- End Options-->
-
                                 <p class="lead">
                                     <a class="btn btn-dark" href="{{route('question.edit',$question->id)}}" role="button">ویرایش</a>
                                 </p>
