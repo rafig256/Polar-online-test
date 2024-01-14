@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('poles', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable()->comment('نام اختصاری');
+            $table->string('name')->comment('نام اختصاری');
             $table->string('positive')->comment('قطب مثبت');
             $table->string('negative')->comment('قطب منفی');
             $table->foreignId('exam_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
