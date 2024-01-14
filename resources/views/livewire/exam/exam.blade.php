@@ -28,11 +28,14 @@
                     <h6 class="text-center">{{$exam->number_questions}}</h6>
 
                     <small class="text-center d-block mt-3">مدت زمان لازم برای آزمون:</small>
-                    <h6 class="text-center">{{$exam->time/60}} دقیقه</h6>
+                    <h6 class="text-center">{{round($exam->time/60,0)}} دقیقه</h6>
 
                     <small class="text-center d-block mt-3">زمان ثبت در سایت:</small>
                     <h6 class="text-center">{{$exam->created_at->diffForHumans()}} </h6>
 
+                    <div class="col-12 justify-content-center text-center mt-3">
+                        <a href="{{route('runExam',$exam->id)}}" class="btn rounded_5 btn-success">شرکت در آزمون</a>
+                    </div>
 
                     <div class="col-12 justify-content-center text-center mt-3">
                         <a href="{{route('home')}}" class="btn rounded_5 btn-outline-dark">سایر آزمون ها</a>

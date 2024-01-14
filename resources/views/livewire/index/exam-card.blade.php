@@ -10,7 +10,7 @@
                     {{$exam->info}}
                 </p>
                 <p>تعداد سوال: {{$exam->number_questions}}</p>
-                <p>مدت زمان: {{$exam->time/ 60}} دقیقه</p>
+                <p>مدت زمان: {{round($exam->time/ 60,0,PHP_ROUND_HALF_UP)}} دقیقه</p>
                 <a href="{{route('examPage',$exam->id)}}" class="btn btn-primary cursor_pointer_shadow rounded_5 px-3">مشاهده آزمون</a>
             </div>
         </a>

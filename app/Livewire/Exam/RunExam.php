@@ -8,6 +8,14 @@ use Livewire\Component;
 class RunExam extends Component
 {
     public $exam;
+    public $formFields=[];
+
+
+    public function saveForm()
+    {
+        dd($this->formFields);
+    }
+
 
     public function mount($id)
     {
@@ -17,4 +25,5 @@ class RunExam extends Component
     {
         return view('livewire.exam.run-exam');
     }
+
 }
