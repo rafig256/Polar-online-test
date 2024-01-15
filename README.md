@@ -17,5 +17,10 @@ The `online-exam` project is a web-based system built using the Laravel framewor
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+
+## Requirements
+- Laravel 10.*
+- PHP v 8.*
+
 ## License
 MIT
