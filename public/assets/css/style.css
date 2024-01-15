@@ -1,16 +1,24 @@
 @font-face {
-  font-family: "BYekan";
-  src: url("../fonts/BYekan/BYekan-webfont.eot") format("eot"),
-    url("../fonts/BYekan/BYekan-webfont.woff") format("woff"),
-    url("../fonts/BYekan/BYekan-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "vazir";
+    src: url("../fonts/Vazir-Light.eot");
+    src: url("../fonts/Vazir-Light.woff") format("woff"),
+    url('../fonts/Vazir-Light.woff2') format('woff2'),
+    url('../fonts/Vazir-Light.ttf') format('truetype');
 }
+
+body {
+    font-family: 'vazir','Nunito', sans-serif;
+    color: #000000;
+    background-color: #fefefe;
+    overflow-x: hidden;
+    text-align: right;
+}
+
 
 * {
   direction: rtl;
   text-align: right;
-  font-family: "BYekan";
+    font-family: "vazir", serif;
 }
 
 li {

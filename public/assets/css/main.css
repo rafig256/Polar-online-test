@@ -1896,14 +1896,14 @@ table .badge-success, table .badge-primary, table .badge-warning, table .badge-d
 /*
     Progress Bar
 */
-.progress {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    background-color: #191e3a;
-    margin-bottom: 1.25rem;
-    height: 16px;
-    box-shadow: none; }
+/*.progress {*/
+/*    -webkit-border-radius: 0;*/
+/*    -moz-border-radius: 0;*/
+/*    border-radius: 0;*/
+/*    background-color: #191e3a;*/
+/*    margin-bottom: 1.25rem;*/
+/*    height: 16px;*/
+/*    box-shadow: none; }*/
 .progress.progress-bar-stack .progress-bar:last-child {
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px; }
@@ -2158,4 +2158,26 @@ table .badge-success, table .badge-primary, table .badge-warning, table .badge-d
 .h_85{
     height: 85px;
     overflow: hidden;
+}
+/*Rafig add*/
+.progress-right{
+    padding-right: 0 !important;
+    direction: rtl !important;
+}
+.progress-right-child{
+    background-color: #e7515a !important;
+    border-color: #e7515a;
+    color: #fff;
+    border-radius: 16px 0px 0px 16px !important;
+}
+
+.progress-left{
+    padding-left: 0 !important;
+    direction: ltr !important;
+}
+.progress-left-child{
+    background-color: #2196f3 !important;
+    border-color: #2196f3;
+    color: #fff;
+    border-radius: 0px 16px 16px 0px !important;
 }
