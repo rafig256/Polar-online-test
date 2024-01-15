@@ -3,9 +3,7 @@
             <div class="p-2 bg-light rounded">
                 <h1 class="text-center font_2 py-2">{{$exam->name}}</h1>
                 <div class="image text-center">
-
-                    <P><strong>توضیحات آزمون:</strong> {{$exam->info}}</P>
-                    <p>این آزمون دارای <strong>{{$exam->number_questions}}</strong> سوال است که <strong>{{$exam->time}}</strong> ثانیه برای پاسخدهی برای آن در نظر گرفته شده است.
+                    <p><strong>توضیحات آزمون:</strong>این آزمون دارای <strong>{{$exam->number_questions}}</strong> سوال است که <strong>{{$exam->time}}</strong> ثانیه برای پاسخدهی برای آن در نظر گرفته شده است.
                     <br>
                     با این حال برای اینکه شما با خیال راحتتری نسبت به پاسخگویی اقدام کنید <strong>{{round($exam->time*11/10,0)}}</strong> ثانیه زمان برای شما در نظر گرفته شده است.
                     </p>

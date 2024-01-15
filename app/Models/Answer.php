@@ -10,4 +10,9 @@ class Answer extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function exam()
+    {
+        return $this->belongsTo(Exam::class);
+    }
 }
