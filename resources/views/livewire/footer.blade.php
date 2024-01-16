@@ -10,9 +10,6 @@
             <ul class="px-0">
                 <li class="text-center"><a href="#">لینک 1</a></li>
                 <li class="text-center"><a href="#">لینک 2</a></li>
-                <li class="text-center"><a href="#">لینک 3</a></li>
-                <li class="text-center"><a href="#">لینک 4</a></li>
-                <li class="text-center"><a href="#">لینک 5</a></li>
             </ul>
         </div>
 
@@ -21,9 +18,6 @@
             <ul class="px-0">
                 <li class="text-center"><a href="#">لینک 1</a></li>
                 <li class="text-center"><a href="#">لینک 2</a></li>
-                <li class="text-center"><a href="#">لینک 3</a></li>
-                <li class="text-center"><a href="#">لینک 4</a></li>
-                <li class="text-center"><a href="#">لینک 5</a></li>
             </ul>
         </div>
 
