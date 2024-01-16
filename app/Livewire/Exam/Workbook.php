@@ -2,8 +2,10 @@
 
 namespace App\Livewire\Exam;
 
+use App\Mail\CreateAnswer;
 use App\Models\Answer;
 use App\Models\Question;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class Workbook extends Component
@@ -14,7 +16,6 @@ class Workbook extends Component
 
     public function mount(){
         $this->polesArray = $this->createPollsArray($this->answer);
-//        dd($this->polesArray );
     }
 
     public function createPollsArray($answerModel): array
@@ -31,7 +32,6 @@ class Workbook extends Component
                 $pole->negative => 0,
             ];
         }
-//        dd($polesArray);
         //insert PolesArray with answer's Data
         foreach ($answer as $question_id =>$optionValue){
             $question = Question::query()->find($question_id);
@@ -46,7 +46,8 @@ class Workbook extends Component
                 $polesArray["$poleNAme"]["sum"] += abs($optionValue);
             }
         }
-
+        $userName = $this->answer->user->name ;
+        Mail::to($this->answer->user->email)->send(new CreateAnswer([$polesArray,$userName]));
         return $polesArray;
     }
 

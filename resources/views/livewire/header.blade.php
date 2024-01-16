@@ -9,19 +9,11 @@
                 <a wire:navigate href="/">خانه</a>
                 <span></span>
             </li>
-            <li class="mx-3 cursor_pointer_text_shadow font_1_1">
-                <a wire:navigate href="/exam/1">مقاله 1</a>
-                <span></span>
-            </li>
 
-            <li class="mx-3 cursor_pointer_text_shadow font_1_1">
-                مقالات
-                <span></span>
-            </li>
-            <li class="mx-3 cursor_pointer_text_shadow font_1_1">
-                درباره ما
-                <span></span>
-            </li>
+{{--            <li class="mx-3 cursor_pointer_text_shadow font_1_1">--}}
+{{--                درباره ما--}}
+{{--                <span></span>--}}
+{{--            </li>--}}
             @if(auth()->check())
                 <li class="mx-3 cursor_pointer_text_shadow font_1_1">
 خوش آمدی                     {{auth()->user()->name}}
