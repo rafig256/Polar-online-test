@@ -20,7 +20,6 @@ class CreateAnswer extends Mailable
      */
     public function __construct($data)
     {
-//        dd($data);
         $this->polesArray = $data[0];
         $this->userName = $data[1];
     }

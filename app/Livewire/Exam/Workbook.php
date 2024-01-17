@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Exam;
 
+use App\Jobs\SendEmail;
 use App\Mail\CreateAnswer;
 use App\Models\Answer;
 use App\Models\Question;
@@ -47,7 +48,8 @@ class Workbook extends Component
             }
         }
         $userName = $this->answer->user->name ;
-        Mail::to($this->answer->user->email)->send(new CreateAnswer([$polesArray,$userName]));
+        SendEmail::dispatch($this->answer->user->email,$polesArray,$userName);
+//        Mail::to($this->answer->user->email)->send(new CreateAnswer([$polesArray,$userName]));
         return $polesArray;
     }
 
